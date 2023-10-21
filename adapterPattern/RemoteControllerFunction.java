@@ -1,8 +1,9 @@
 package adapterPattern;
 
+// Interface for remote controller functions
 public interface RemoteControllerFunction {
-    public String powerOn();
-    public String powerOff();
-    public String pressPlusButton();
-    public String pressMinusButton();
+    String powerOn();
+    String powerOff();
+    String increaseSetting();
+    String decreaseSetting();
 }

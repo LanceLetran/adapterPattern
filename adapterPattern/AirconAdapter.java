@@ -1,9 +1,10 @@
 package adapterPattern;
 
+// Adapter for AirCon to RemoteControllerFunction
 public class AirconAdapter implements RemoteControllerFunction {
-    private AirCon airCon;
+    private final AirCon airCon;
 
-    public AirconAdapter(AirCon airCon){
+    public AirconAdapter(AirCon airCon) {
         this.airCon = airCon;
     }
 
@@ -18,12 +19,12 @@ public class AirconAdapter implements RemoteControllerFunction {
     }
 
     @Override
-    public String pressPlusButton() {
-        return airCon.tempUp();
+    public String increaseSetting() {
+        return airCon.increaseTemperature();
     }
 
     @Override
-    public String pressMinusButton() {
-        return airCon.tempDown();
+    public String decreaseSetting() {
+        return airCon.decreaseTemperature();
     }
 }

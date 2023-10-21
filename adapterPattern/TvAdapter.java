@@ -1,30 +1,30 @@
 package adapterPattern;
 
-public class TvAdapter implements  RemoteControllerFunction {
-    private Tv tv;
+// Adapter for Tv to RemoteControllerFunction
+public class TvAdapter implements RemoteControllerFunction {
+    private final Tv tv;
 
-    public TvAdapter(Tv tv){
+    public TvAdapter(Tv tv) {
         this.tv = tv;
     }
 
-
     @Override
     public String powerOn() {
-        return tv.switchOn();
+        return tv.turnOn();
     }
 
     @Override
     public String powerOff() {
-        return tv.switchOff();
+        return tv.turnOff();
     }
 
     @Override
-    public String pressPlusButton() {
-        return tv.changeChannelUp();
+    public String increaseSetting() {
+        return tv.volumeUp();
     }
 
     @Override
-    public String pressMinusButton() {
-        return tv.changeChannelDown();
+    public String decreaseSetting() {
+        return tv.volumeDown();
     }
 }

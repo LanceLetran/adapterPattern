@@ -1,20 +1,20 @@
 package adapterPattern;
 
+// Tv class
 public class Tv {
-    public String switchOn(){
-        return "TV is switched on!";
+    public String turnOn() {
+        return "TV is turning on.";
     }
 
-    public String switchOff(){
-        return "TV is switched off!";
-
+    public String turnOff() {
+        return "TV is turning off.";
     }
 
-    public String changeChannelUp(){
-        return "TV is changing channel forward!";
+    public String volumeUp() {
+        return "TV volume is increasing.";
     }
 
-    public String changeChannelDown(){
-        return "TV is changing channel backward!";
+    public String volumeDown() {
+        return "TV volume is decreasing.";
     }
 }

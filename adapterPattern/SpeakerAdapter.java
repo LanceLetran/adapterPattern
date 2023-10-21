@@ -1,29 +1,30 @@
 package adapterPattern;
 
+// Adapter for Speaker to RemoteControllerFunction
 public class SpeakerAdapter implements RemoteControllerFunction {
-    private Speaker speaker;
+    private final Speaker speaker;
 
-    public SpeakerAdapter(Speaker speaker){
+    public SpeakerAdapter(Speaker speaker) {
         this.speaker = speaker;
     }
 
     @Override
     public String powerOn() {
-        return speaker.speakerOn();
+        return speaker.turnOn();
     }
 
     @Override
     public String powerOff() {
-        return speaker.speakerOff();
+        return speaker.turnOff();
     }
 
     @Override
-    public String pressPlusButton() {
+    public String increaseSetting() {
         return speaker.volumeUp();
     }
 
     @Override
-    public String pressMinusButton() {
-        return speaker.voulumeDown();
+    public String decreaseSetting() {
+        return speaker.volumeDown();
     }
 }
